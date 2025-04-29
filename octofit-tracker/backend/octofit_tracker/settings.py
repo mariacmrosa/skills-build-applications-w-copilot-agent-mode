@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-INSTALLED_APPS += ['octofit_tracker']
+INSTALLED_APPS += ['octofit_tracker' ,  'rest_framework',]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
