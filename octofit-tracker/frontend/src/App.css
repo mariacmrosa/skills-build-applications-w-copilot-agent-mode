@@ -1,0 +1,58 @@
+/* Estilos globais para o aplicativo Octofit Tracker */
+body {
+  background-color: #f0f8ff; /* Azul claro */
+  color: #333; /* Texto escuro */
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50; /* Azul escuro */
+}
+
+a {
+  color: #3498db; /* Azul vibrante */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1abc9c; /* Verde claro */
+}
+
+.navbar {
+  background-color: #34495e; /* Cinza escuro */
+}
+
+.navbar .nav-link {
+  color: #ecf0f1; /* Branco gelo */
+}
+
+.navbar .nav-link:hover {
+  color: #1abc9c; /* Verde claro */
+}
+
+.table {
+  background-color: #ecf0f1; /* Branco gelo */
+  color: #2c3e50; /* Azul escuro */
+}
+
+.table th {
+  background-color: #3498db; /* Azul vibrante */
+  color: #fff; /* Branco */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9; /* Cinza claro */
+}
+
+button {
+  background-color: #1abc9c; /* Verde claro */
+  color: #fff; /* Branco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #16a085; /* Verde escuro */
+}
