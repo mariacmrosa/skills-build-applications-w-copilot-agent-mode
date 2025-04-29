@@ -4,9 +4,17 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/users')
-      .then(response => response.json())
-      .then(data => setUsers(data));
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/users');
+        const data = await response.json();
+        setUsers(data);
+      } catch (error) {
+        console.error('Error fetching users:', error);
+      }
+    };
+
+    fetchUsers();
   }, []);
 
   return (

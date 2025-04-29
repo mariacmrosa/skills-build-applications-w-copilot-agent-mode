@@ -5,6 +5,7 @@ import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
+import PageNotFound from './components/PageNotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/teams" element={<Teams />} />
         <Route path="/users" element={<Users />} />
         <Route path="/workouts" element={<Workouts />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );

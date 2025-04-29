@@ -4,9 +4,17 @@ function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/leaderboard')
-      .then(response => response.json())
-      .then(data => setLeaderboard(data));
+    const fetchLeaderboard = async () => {
+      try {
+        const response = await fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/leaderboard');
+        const data = await response.json();
+        setLeaderboard(data);
+      } catch (error) {
+        console.error('Error fetching leaderboard:', error);
+      }
+    };
+
+    fetchLeaderboard();
   }, []);
 
   return (

@@ -4,9 +4,17 @@ function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/workouts')
-      .then(response => response.json())
-      .then(data => setWorkouts(data));
+    const fetchWorkouts = async () => {
+      try {
+        const response = await fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/workouts');
+        const data = await response.json();
+        setWorkouts(data);
+      } catch (error) {
+        console.error('Error fetching workouts:', error);
+      }
+    };
+
+    fetchWorkouts();
   }, []);
 
   return (

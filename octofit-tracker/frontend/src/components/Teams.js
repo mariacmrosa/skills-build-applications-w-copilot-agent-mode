@@ -4,9 +4,17 @@ function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/teams')
-      .then(response => response.json())
-      .then(data => setTeams(data));
+    const fetchTeams = async () => {
+      try {
+        const response = await fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/teams');
+        const data = await response.json();
+        setTeams(data);
+      } catch (error) {
+        console.error('Error fetching teams:', error);
+      }
+    };
+
+    fetchTeams();
   }, []);
 
   return (

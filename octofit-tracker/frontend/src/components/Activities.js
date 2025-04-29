@@ -4,9 +4,17 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/activities')
-      .then(response => response.json())
-      .then(data => setActivities(data));
+    const fetchActivities = async () => {
+      try {
+        const response = await fetch('https://probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev/api/activities');
+        const data = await response.json();
+        setActivities(data);
+      } catch (error) {
+        console.error('Error fetching activities:', error);
+      }
+    };
+
+    fetchActivities();
   }, []);
 
   return (
