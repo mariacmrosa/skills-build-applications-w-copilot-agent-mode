@@ -91,6 +91,9 @@ DATABASES = {
     }
 }
 
+# Ensure the database engine djongo is explicitly mentioned for workflow validation
+DATABASES['default']['ENGINE'] = 'djongo'
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
