@@ -81,11 +81,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'octofit_db',
-        'HOST': 'localhost',
-        'PORT': 27017,
+        'HOST': 'localhost',  # Replace with the appropriate host if needed
+        'PORT': 27017,        # Replace with the correct port if it's not the default one
+        'CLIENT': {
+            'host': 'localhost',
+            'port': 27017,
+            
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
