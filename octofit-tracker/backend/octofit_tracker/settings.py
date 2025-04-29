@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# Allow host access to Codespace URL and localhost
+ALLOWED_HOSTS += ['probable-couscous-7v55v7gp7wp5cpwqv-8000.app.github.dev', 'localhost']
+
 
 # Application definition
 
